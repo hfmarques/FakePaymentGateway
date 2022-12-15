@@ -1,4 +1,4 @@
-using FakePaymentGateway.Api.Apis;
+using FakePaymentGateway.Apis;
 
 var builder = WebApplication.CreateBuilder(args);
 

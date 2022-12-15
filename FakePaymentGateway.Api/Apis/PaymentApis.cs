@@ -1,4 +1,4 @@
-﻿namespace FakePaymentGateway.Api.Apis;
+﻿namespace FakePaymentGateway.Apis;
 
 public static class PaymentApis
 {

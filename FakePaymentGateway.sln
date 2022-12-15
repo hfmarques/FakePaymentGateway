@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentGateway.Api", "FakePaymentGateway.Api\FakePaymentGateway.Api.csproj", "{F1BD2B91-64DD-401C-9BFD-55D1A38054D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentGateway.Core", "FakePaymentGateway.Core\FakePaymentGateway.Core.csproj", "{7425E25E-372A-4A3D-9B1F-4940947C190E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentGateway.Adapters", "FakePaymentGateway.Adapters\FakePaymentGateway.Adapters.csproj", "{62145488-E2F9-4E83-9D4A-5CE095124747}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{F1BD2B91-64DD-401C-9BFD-55D1A38054D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1BD2B91-64DD-401C-9BFD-55D1A38054D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1BD2B91-64DD-401C-9BFD-55D1A38054D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7425E25E-372A-4A3D-9B1F-4940947C190E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7425E25E-372A-4A3D-9B1F-4940947C190E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7425E25E-372A-4A3D-9B1F-4940947C190E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7425E25E-372A-4A3D-9B1F-4940947C190E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62145488-E2F9-4E83-9D4A-5CE095124747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62145488-E2F9-4E83-9D4A-5CE095124747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62145488-E2F9-4E83-9D4A-5CE095124747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62145488-E2F9-4E83-9D4A-5CE095124747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
