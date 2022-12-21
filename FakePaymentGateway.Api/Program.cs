@@ -1,13 +1,15 @@
+using FakePaymentGateway;
 using FakePaymentGateway.Apis;
+using FakePaymentGateway.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.InitRabbitMQ(builder.Configuration);
+builder.Services.InitMongoDependencies(builder.Configuration);
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+builder.Services.AddSingleton<ApplicationInitializer>();
+builder.Services.AddTransient<ProcessService>();
+builder.Services.AddSingleton<IWebHookCallbackService, WebHookCallbackService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,6 +20,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.Map("/", () => Results.Redirect("/swagger"));
+
+app.Services.GetRequiredService<ProcessService>().Consume();
 
 app.MapPayments();
 

@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace FakePaymentGateway.Entities;
 
-public class PaymentOrder
+public class PaymentOrder : IPersistentEntity
 {
     [BsonId(IdGenerator = typeof(CombGuidGenerator))]
     public required Guid Id { get; set; }

@@ -1,0 +1,43 @@
+﻿version: '3.4'
+
+services:
+#  external_paymentgateway:
+#    build:
+#      context: .
+#      dockerfile: External.PaymentGateway/Dockerfile
+#    depends_on:
+#      - mongo
+#      - message_broker
+#    networks:
+#      - external_payment_net
+
+  mongo:
+    image: mongo:4.2.6
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    volumes:
+      - mongo_data/:/data/db
+    networks:
+      - external_payment_net
+
+
+  message_broker:
+    container_name: "rabbitmq_teste"
+    image: rabbitmq:3.8-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - external_payment_net
+
+
+volumes:
+  mongo_data:
+  rabbitmq_data:
+
+networks:
+  external_payment_net:
+    driver: bridge

@@ -1,6 +1,6 @@
 ﻿namespace FakePaymentGateway.Entities;
 
-public class IPersistentEntity
+public interface IPersistentEntity
 {
     public Guid Id { get; set; }
 }

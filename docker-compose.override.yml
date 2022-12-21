@@ -1,0 +1,18 @@
+﻿version: '3.4'
+
+services:
+  external_paymentgateway:
+    image: ${DOCKER_REGISTRY-}externalpaymentgateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80:80"
+
+  mongo:
+    ports:
+      - "27017:27017"
+
+
+  message_broker:
+    ports:
+      - "15672:15672"

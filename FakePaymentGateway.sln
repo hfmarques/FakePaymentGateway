@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentGateway.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentGateway.Adapters", "FakePaymentGateway.Adapters\FakePaymentGateway.Adapters.csproj", "{62145488-E2F9-4E83-9D4A-5CE095124747}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-compose", "docker-compose.dcproj", "{FD9669C0-BE53-42C0-977E-94D6AC15549B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{62145488-E2F9-4E83-9D4A-5CE095124747}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62145488-E2F9-4E83-9D4A-5CE095124747}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62145488-E2F9-4E83-9D4A-5CE095124747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9669C0-BE53-42C0-977E-94D6AC15549B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9669C0-BE53-42C0-977E-94D6AC15549B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9669C0-BE53-42C0-977E-94D6AC15549B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9669C0-BE53-42C0-977E-94D6AC15549B}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
