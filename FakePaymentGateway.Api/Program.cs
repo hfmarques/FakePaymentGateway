@@ -26,6 +26,7 @@ if (app.Environment.IsDevelopment())
 
 app.Map("/", () => Results.Redirect("/swagger"));
 
+app.Services.GetRequiredService<ApplicationInitializer>().Initialize();
 app.Services.GetRequiredService<ProcessService>().Consume();
 
 app.MapPayments();

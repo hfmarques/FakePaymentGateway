@@ -48,6 +48,8 @@ public class QueueConsumer<T> : IConsumer<T>
                 throw;
             }
         };
+
+        _rabbitMqModel.BasicConsume(queue: queueName, autoAck: false, consumer);
     }
 
     protected virtual void Dispatch(T? treatedObject, Action<T> action) => action(treatedObject);
