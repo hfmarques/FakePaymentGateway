@@ -1,12 +1,12 @@
 ﻿version: '3.4'
 
 services:
-  external_paymentgateway:
-    image: ${DOCKER_REGISTRY-}externalpaymentgateway
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "80:80"
+  #  fake_payment_gateway:
+  #    image: ${DOCKER_REGISTRY-}fake_payment_gateway
+  #    environment:
+  #      - ASPNETCORE_ENVIRONMENT=Development
+  #    ports:
+  #      - "80:80"
 
   mongo:
     ports:
@@ -16,3 +16,4 @@ services:
   message_broker:
     ports:
       - "15672:15672"
+      - "5672:5672"

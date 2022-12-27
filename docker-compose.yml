@@ -1,15 +1,15 @@
 ﻿version: '3.4'
 
 services:
-#  external_paymentgateway:
-#    build:
-#      context: .
-#      dockerfile: External.PaymentGateway/Dockerfile
-#    depends_on:
-#      - mongo
-#      - message_broker
-#    networks:
-#      - external_payment_net
+  #  fake_payment_gateway:
+  #    build:
+  #      context: .
+  #      dockerfile: FakePaymentGateway.Api/Dockerfile
+  #    depends_on:
+  #      - mongo
+  #      - message_broker
+  #    networks:
+  #      - external_payment_net
 
   mongo:
     image: mongo:4.2.6
@@ -17,7 +17,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=example
     volumes:
-      - mongo_data/:/data/db
+      - mongo_data:/data/db
     networks:
       - external_payment_net
 

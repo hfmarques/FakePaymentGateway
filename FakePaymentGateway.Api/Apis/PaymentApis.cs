@@ -26,14 +26,14 @@ public static class PaymentApis
                 var payment = paymentQuery.SingleOrDefault(x => x.Id == id);
                 return payment is not null ? TypedResults.Ok(payment) : TypedResults.NotFound();
             });
-
+        
         groupBuilder.MapPost("/", 
             Created<PaymentOrder> (
-                [FromBody]IPaymentService paymentService, 
+                [FromServices] IPaymentService paymentService, 
                 [FromBody] PaymentOrder payment) =>
         {
             paymentService.ProcessPayment(payment);
-
+        
             return TypedResults.Created($"/payments/{payment.Id}", payment);
         });
         

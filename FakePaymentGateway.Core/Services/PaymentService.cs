@@ -15,8 +15,7 @@ public class PaymentService : IPaymentService
         _accountQuery = accountQuery;
         _paymentPersistence = paymentPersistence;
     }
-
-
+    
     public void ProcessPayment(PaymentOrder paymentOrder)
     {
         var account = _accountQuery.SingleOrDefault(it => it.Id == paymentOrder.AccountId);
